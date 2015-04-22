@@ -45,21 +45,21 @@ public class RumahSakit {
         pasien1.setObat(obat1);
         
         InfoPasien info1 = new InfoPasien();
-        info1.kode = "Info Pasien - 001";
-        info1.dokter = dokter1;
-        info1.pasien = pasien1;
-        info1.perawat = perawat1;
-        info1.ruang = ruang1;
-        info1.obat = obat1;
-        info1.waktuInap = new Date();
+        info1.setKode("Info Pasien - 001");
+        info1.setDokter(dokter1);
+        info1.setPasien(pasien1);
+        info1.setPerawat(perawat1);
+        info1.setRuang(ruang1);
+        info1.setObat(obat1);
+        info1.setWaktuInap(new Date());
         
         dokter1.setPasien(pasien1);
         
         InfoDokter info2 = new InfoDokter();
-        info2.kode = "Info Dokter - 001";
-        info2.dokter = dokter1;
-        info2.pasien = pasien1;
-        info2.waktuKerja = new Date();
+        info2.setKode("Info Dokter - 001");
+        info2.setDokter(dokter1);
+        info2.setPasien(pasien1);
+        info2.setWaktuKerja(new Date());
     
         CetakInfoPasien(info1);
         System.out.println();
@@ -67,25 +67,25 @@ public class RumahSakit {
     }
     
     static void CetakInfoPasien(InfoPasien pasien){
-        System.out.println("kode - "+pasien.kode);
+        System.out.println("kode - "+pasien.getKode());
         
-        System.out.println("Pasien\t: "+pasien.pasien.getId()+" - "+pasien.pasien.getNama()
-                +"\nDokter\t: "+pasien.dokter.getId()+" - "+pasien.dokter.getNama()
-                +"\nPerawat\t: "+pasien.perawat.getId()+" - "+pasien.perawat.getNama()
-                +"\nSakit\t: "+pasien.pasien.getPenyakit()
-                +"\nRuangan\t: "+pasien.ruang.getRuang()+"-"+pasien.ruang.getKasur()
-                +"\nObat\t: "+pasien.obat.getId()+" - "+pasien.obat.getNamaObat()+" - "+pasien.obat.getMerk()
-                +"\nInap\t: "+pasien.waktuInap
+        System.out.println("Pasien\t: "+pasien.getPasien().getId()+" - "+pasien.getPasien().getNama()
+                +"\nDokter\t: "+pasien.getDokter().getId()+" - "+pasien.getDokter().getNama()
+                +"\nPerawat\t: "+pasien.getPerawat().getId()+" - "+pasien.getPerawat().getNama()
+                +"\nSakit\t: "+pasien.getPasien().getPenyakit()
+                +"\nRuangan\t: "+pasien.getRuang().getRuang()+"-"+pasien.getRuang().getKasur()
+                +"\nObat\t: "+pasien.getObat().getId()+" - "+pasien.getObat().getNamaObat()+" - "+pasien.getObat().getMerk()
+                +"\nInap\t: "+pasien.getWaktuInap()
         );
     }
     
     static void CetakInfoDokter(InfoDokter dokter){
-        System.out.println("kode - "+dokter.kode);
+        System.out.println("kode - "+dokter.getKode());
         
-        System.out.println("Nama\t: "+dokter.dokter.getNama()
-                +"\nID\t: "+dokter.dokter.getId()
-                +"\nPasien\t: "+dokter.pasien.getNama()
-                +"\nKerja\t: "+dokter.waktuKerja
+        System.out.println("Nama\t: "+dokter.getDokter().getNama()
+                +"\nID\t: "+dokter.getDokter().getId()
+                +"\nPasien\t: "+dokter.getPasien().getNama()
+                +"\nKerja\t: "+dokter.getWaktuKerja()
         );
     }
     
