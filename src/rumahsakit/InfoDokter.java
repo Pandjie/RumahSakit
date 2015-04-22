@@ -13,8 +13,64 @@ import java.util.Date;
  */
 public class InfoDokter {
     
-    String kode;
-    Dokter dokter;
-    Pasien pasien;
-    Date waktuKerja;
+    private String kode;
+    private Dokter dokter;
+    private Pasien pasien;
+    private Date waktuKerja;
+
+    /**
+     * @return the kode
+     */
+    public String getKode() {
+        return kode;
+    }
+
+    /**
+     * @param kode the kode to set
+     */
+    public void setKode(String kode) {
+        this.kode = kode;
+    }
+
+    /**
+     * @return the dokter
+     */
+    public Dokter getDokter() {
+        return dokter;
+    }
+
+    /**
+     * @param dokter the dokter to set
+     */
+    public void setDokter(Dokter dokter) {
+        this.dokter = dokter;
+    }
+
+    /**
+     * @return the pasien
+     */
+    public Pasien getPasien() {
+        return pasien;
+    }
+
+    /**
+     * @param pasien the pasien to set
+     */
+    public void setPasien(Pasien pasien) {
+        this.pasien = pasien;
+    }
+
+    /**
+     * @return the waktuKerja
+     */
+    public Date getWaktuKerja() {
+        return waktuKerja;
+    }
+
+    /**
+     * @param waktuKerja the waktuKerja to set
+     */
+    public void setWaktuKerja(Date waktuKerja) {
+        this.waktuKerja = waktuKerja;
+    }
 }
